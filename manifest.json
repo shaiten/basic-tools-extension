@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "lmtfo",
+    "description": "my own take on useful web actions starting with blocking all popups everywhere",
+    "version": "1.0",
+    "action": {
+        "default_popup": "main.html",
+        "default_icon": "images/icon16.png"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "icons": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "scripts/content.js"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
